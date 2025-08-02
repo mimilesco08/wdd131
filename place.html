@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippines - Country Page</title>
+    <meta name="description" content="Learn about the Philippines - its culture, geography, and current weather conditions.">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Philippines</h1>
+    </header>
+
+    <main>
+        <!-- Hero Image Section -->
+        <section class="hero">
+            <picture>
+                <source media="(max-width: 400px)" srcset="images/philippines-mobile.webp">
+                <source media="(min-width: 401px)" srcset="images/philippines-desktop.webp">
+                <img src="images/philippines-desktop.webp" alt="Beautiful landscape of the Philippines with rice terraces">
+            </picture>
+        </section>
+
+        <!-- Data Section -->
+        <section class="data">
+            <h2>Data</h2>
+            <div class="data-grid">
+                <div class="data-item">
+                    <span class="label">Area:</span>
+                    <span class="value">300,000 sq km</span>
+                </div>
+                <div class="data-item">
+                    <span class="label">Population:</span>
+                    <span class="value">109,581,078</span>
+                </div>
+                <div class="data-item">
+                    <span class="label">Capital:</span>
+                    <span class="value">Manila</span>
+                </div>
+                <div class="data-item">
+                    <span class="label">Languages:</span>
+                    <span class="value">Filipino, English</span>
+                </div>
+                <div class="data-item">
+                    <span class="label">Currency:</span>
+                    <span class="value">Philippine Peso</span>
+                </div>
+                <div class="data-item">
+                    <span class="label">Time Zone:</span>
+                    <span class="value">PHT (UTC+8)</span>
+                </div>
+                <div class="data-item">
+                    <span class="label">Calling Code:</span>
+                    <span class="value">+63</span>
+                </div>
+                <div class="data-item">
+                    <span class="label">Internet TLD:</span>
+                    <span class="value">.ph</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather">
+            <h2>Weather</h2>
+            <div class="weather-icon-mobile">
+                <img src="images/sunny.svg" alt="Sunny weather icon">
+            </div>
+            <div class="weather-grid">
+                <div class="weather-item">
+                    <span class="label">Temperature:</span>
+                    <span class="value" id="temperature">28°C</span>
+                </div>
+                <div class="weather-item">
+                    <span class="label">Conditions:</span>
+                    <span class="value">Partly Sunny</span>
+                </div>
+                <div class="weather-item">
+                    <span class="label">Wind:</span>
+                    <span class="value" id="wind-speed">10 km/h</span>
+                </div>
+                <div class="weather-item">
+                    <span class="label">Wind Chill:</span>
+                    <span class="value" id="wind-chill">N/A</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 🇵🇭 Philippines Information Page 🇵🇭</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
