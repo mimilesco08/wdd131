@@ -1,89 +1,53 @@
-<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple Album</title>
-    <meta name="description" content="Explore beautiful LDS temples from around the world">
+    <title>Filtered Temple Album</title>
+    <meta name="description" content="A responsive temple album with filtering functionality showcasing beautiful temples from around the world">
+    <meta name="author" content="Your Name">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css">
+    
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    
+    
+    <script src="scripts/filtered-temples.js" defer></script>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <h2 class="site-title">Sacred Temples</h2>
-            <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+            <h1 class="site-title">Temple Album</h1>
+            <button id="menu-button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </div>
-        <nav>
+        <nav id="navigation">
             <ul class="nav-menu">
-                <li><a href="#" class="nav-link active" data-filter="all">Home</a></li>
-                <li><a href="#" class="nav-link" data-filter="old">Old</a></li>
-                <li><a href="#" class="nav-link" data-filter="new">New</a></li>
-                <li><a href="#" class="nav-link" data-filter="large">Large</a></li>
-                <li><a href="#" class="nav-link" data-filter="small">Small</a></li>
+                <li><a href="#" data-filter="all" class="nav-link active">Home</a></li>
+                <li><a href="#" data-filter="old" class="nav-link">Old</a></li>
+                <li><a href="#" data-filter="new" class="nav-link">New</a></li>
+                <li><a href="#" data-filter="large" class="nav-link">Large</a></li>
+                <li><a href="#" data-filter="small" class="nav-link">Small</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Temple Gallery</h1>
+        <h1 id="page-title">Sacred Temples Around the World</h1>
         <div class="temple-grid" id="temple-grid">
+          
         </div>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Sacred Temples | Last Modified: <span id="lastModified"></span></p>
+        <div class="footer-content">
+            <p>&copy; <span id="currentyear"></span> Temple Album | Emilio Escobar | Last Modified: <span id="lastmodified"></span></p>
+        </div>
     </footer>
-
-    <script src="scripts/temples.js"></script>
-</body>
-</html> -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Temple Album</title>
-  <meta name="description" content="Explore beautiful LDS temples from around the world" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles/temples.css" />
-  <link rel="stylesheet" href="styles/temples-large.css" />
-</head>
-<body>
-  <header>
-    <div class="header-content">
-      <h2 class="site-title">Sacred Temples</h2>
-      <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
-    </div>
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="#" class="nav-link active" data-filter="all">Home</a></li>
-        <li><a href="#" class="nav-link" data-filter="old">Old</a></li>
-        <li><a href="#" class="nav-link" data-filter="new">New</a></li>
-        <li><a href="#" class="nav-link" data-filter="large">Large</a></li>
-        <li><a href="#" class="nav-link" data-filter="small">Small</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <h1>Temple Gallery</h1>
-    <div class="temple-grid" id="temple-grid"></div>
-  </main>
-
-  <footer>
-    <p>&copy; <span id="year"></span> Sacred Temples | Last Modified: <span id="lastModified"></span></p>
-  </footer>
-
-  <script src="scripts/temples.js"></script>
 </body>
 </html>
-
-
