@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Drills - Baseline Fundamentals</title>
+    <meta name="description" content="A complete library of basketball drills for shooting, dribbling, passing, and defense.">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Baseline Fundamentals</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="skills.html">Skills & Drills</a>
+            <a href="log.html">Log Your Practice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Drill Library</h2>
+        <p>Find the perfect drill to work on any part of your game. Use the filter to narrow your search.</p>
+        
+        <div class="filter-controls">
+            <label for="skill-filter">Filter by Skill:</label>
+            <select id="skill-filter">
+                <option value="all">Show All</option>
+                <option value="Shooting">Shooting</option>
+                <option value="Dribbling">Dribbling</option>
+                <option value="Passing">Passing</option>
+                <option value="Defense">Defense</option>
+            </select>
+        </div>
+
+        <div id="drills-container">
+            </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+        <p><a href="references.html">Content & Media References</a></p>
+    </footer>
+</body>
+</html>

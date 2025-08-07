@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Your Practice - Baseline Fundamentals</title>
+    <meta name="description" content="Log your basketball practice sessions to track your progress over time.">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Baseline Fundamentals</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="skills.html">Skills & Drills</a>
+            <a href="log.html">Log Your Practice</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="log-form-section">
+            <h2>Log Your Practice Session</h2>
+            <form id="practice-log-form">
+                <fieldset>
+                    <legend>Session Details</legend>
+                    <label for="practice-date">Date:</label>
+                    <input type="date" id="practice-date" name="date" required>
+
+                    <label for="skill-practiced">Skill Focus:</label>
+                    <select id="skill-practiced" name="skill" required>
+                        <option value="" disabled selected>--Please choose an option--</option>
+                        <option value="Shooting">Shooting</option>
+                        <option value="Dribbling">Dribbling</option>
+                        <option value="Passing">Passing</option>
+                        <option value="Defense">Defense</option>
+                    </select>
+
+                    <label for="practice-duration">Duration (minutes):</label>
+                    <input type="number" id="practice-duration" name="duration" min="1" placeholder="e.g., 30" required>
+
+                    <label for="practice-notes">Notes / What to improve:</label>
+                    <textarea id="practice-notes" name="notes" rows="4" placeholder="e.g., Worked on keeping my guide hand steady."></textarea>
+                </fieldset>
+                <button type="submit">Log Session</button>
+            </form>
+        </section>
+
+        <section id="log-history-section">
+            <h2>My Practice History</h2>
+            <div id="log-history-container">
+                <p>Your logged sessions will appear here.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+        <p><a href="references.html">Content & Media References</a></p>
+    </footer>
+</body>
+</html>
