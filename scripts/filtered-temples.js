@@ -209,3 +209,4 @@ function updatePageTitle(filterText) {
     
     document.getElementById('page-title').textContent = titles[filterText] || 'Sacred Temples Around the World';
 }
+
