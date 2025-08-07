@@ -187,9 +187,9 @@ function filterTemples(filter) {
         
         if (filter === 'all' || categories.includes(filter)) {
             card.classList.remove('hidden');
-            // Reset animation
+           
             card.style.animation = 'none';
-            card.offsetHeight; // Trigger reflow
+            card.offsetHeight; 
             card.style.animation = `fadeIn 0.5s ease-in forwards`;
             card.style.animationDelay = `${index * 0.1}s`;
         } else {
