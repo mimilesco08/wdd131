@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan - Baseline Fundamentals</title>
+    <meta name="description" content="Website planning document for Baseline Fundamentals basketball training website">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #CE1141 0%, #0d1b2a 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #CE1141;
+        }
+
+        h2 {
+            color: #CE1141;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #34495e;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .color-swatch {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            min-width: 200px;
+        }
+
+        .color-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .primary-color { background-color: #CE1141; }
+        .secondary-color { background-color: #0d1b2a; }
+        .accent-color { background-color: #FDB927; }
+        .neutral-color { background-color: #f8f9fa; }
+
+        .typography-example {
+            margin: 1rem 0;
+            padding: 1rem;
+            border-left: 4px solid #3498db;
+            background: #f8f9fa;
+        }
+
+        .heading-font {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+        }
+
+        .body-font {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
+
+        .wireframe-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .wireframe {
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .wireframe h4 {
+            color: #495057;
+            margin-bottom: 1rem;
+        }
+
+        .wireframe-box {
+            background: #e9ecef;
+            border: 1px solid #ced4da;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        .mobile-wireframe .wireframe-box {
+            height: 60px;
+        }
+
+        .desktop-wireframe .wireframe-box {
+            height: 80px;
+        }
+
+        .scenario {
+            background: #e8f5e8;
+            border-left: 4px solid #27ae60;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .scenario strong {
+            color: #27ae60;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 1rem;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+            margin: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .wireframe-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .color-palette {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏀 Baseline Fundamentals</h1>
+            <p class="subtitle">Website Planning Document</p>
+        </header>
+
+        <section class="section">
+            <h2>Site Name</h2>
+            <h3>Baseline Fundamentals</h3>
+            <p><strong>Domain:</strong> baseline-fundamentals.com (or baseline-hoops.org)</p>
+            <p>The name "Baseline Fundamentals" was chosen because it represents the foundation of basketball training. The "baseline" is a fundamental part of basketball court terminology, and "fundamentals" emphasizes our focus on core skills development. This name clearly communicates that we're about building strong foundational skills in basketball.</p>
+            <div class="highlight">
+                <strong>Logo Concept:</strong> A basketball with geometric lines representing the baseline of a court, combined with clean typography that emphasizes reliability and skill development.
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Site Purpose</h2>
+            <p>Baseline Fundamentals serves as a comprehensive digital training hub for basketball players of all skill levels who want to master the essential fundamentals of the game. The website provides:</p>
+            <ul>
+                <li><strong>Structured Skill Development:</strong> Organized drills and exercises for shooting, dribbling, defense, and other core basketball skills</li>
+                <li><strong>Progress Tracking:</strong> Interactive practice logging system to help players monitor their improvement over time</li>
+                <li><strong>Daily Training Guidance:</strong> Featured "Drill of the Day" to provide consistent, focused practice recommendations</li>
+                <li><strong>Educational Resources:</strong> Clear explanations of fundamental techniques with step-by-step instructions</li>
+                <li><strong>Motivational Support:</strong> Tools and content designed to encourage consistent practice and skill development</li>
+            </ul>
+            <p>The site bridges the gap between casual basketball play and structured skill development, making professional-level training techniques accessible to everyone.</p>
+        </section>
+
+        <section class="section">
+            <h2>Target Audience Scenarios</h2>
+            
+            <div class="scenario">
+                <strong>Scenario 1 - High School Player:</strong><br>
+                "I'm on my high school basketball team but I struggle with my free throw shooting. What specific drills can help me improve my shooting consistency, and how should I track my progress?"
+            </div>
+
+            <div class="scenario">
+                <strong>Scenario 2 - Beginner Adult:</strong><br>
+                "I'm 25 and just starting to learn basketball. What are the most important fundamental skills I should focus on first, and how do I practice them correctly?"
+            </div>
+
+            <div class="scenario">
+                <strong>Scenario 3 - Youth Coach:</strong><br>
+                "I coach 12-year-olds and need simple, effective drills that will help them develop proper dribbling technique. What drills work best for this age group?"
+            </div>
+
+            <div class="scenario">
+                <strong>Scenario 4 - Parent:</strong><br>
+                "My daughter loves basketball and wants to practice at home. What fundamental skills can she work on in our backyard, and how can I help track her improvement?"
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Color Schema</h2>
+            <p>The color palette reflects the energy and passion of basketball while maintaining professionalism and readability:</p>
+            
+            <div class="color-palette">
+                <div class="color-swatch" style="background: #fff;">
+                    <div class="color-circle primary-color"></div>
+                    <div>
+                        <strong>Basketball Red (#CE1141)</strong><br>
+                        <small>Headers, navigation, CTA buttons, accent elements</small>
+                    </div>
+                </div>
+                
+                <div class="color-swatch" style="background: #fff;">
+                    <div class="color-circle secondary-color"></div>
+                    <div>
+                        <strong>Dark Navy (#0d1b2a)</strong><br>
+                        <small>Header background, body text, secondary elements</small>
+                    </div>
+                </div>
+                
+                <div class="color-swatch" style="background: #fff;">
+                    <div class="color-circle accent-color"></div>
+                    <div>
+                        <strong>Lakers Gold (#FDB927)</strong><br>
+                        <small>Highlights, links, special callouts, footer accents</small>
+                    </div>
+                </div>
+                
+                <div class="color-swatch" style="background: #fff;">
+                    <div class="color-circle neutral-color"></div>
+                    <div>
+                        <strong>Light Background (#f8f9fa)</strong><br>
+                        <small>Page background, subtle containers</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Typography</h2>
+            
+            <div class="typography-example">
+                <h3 class="heading-font">Primary Font: Roboto Slab (Google Fonts)</h3>
+                <p><strong>Usage:</strong> Main headings (H1, H2, H3), form legends, emphasized text</p>
+                <p><strong>Characteristics:</strong> A modern slab serif that combines readability with athletic confidence. The slab serifs give it a strong, grounded feel perfect for sports branding.</p>
+            </div>
+
+            <div class="typography-example">
+                <h3 class="body-font">Secondary Font: Roboto (Google Fonts)</h3>
+                <p class="body-font"><strong>Usage:</strong> Body text, navigation, form inputs, descriptions, captions</p>
+                <p class="body-font"><strong>Characteristics:</strong> Clean, highly legible sans-serif designed for optimal readability across all devices. Excellent for user interfaces and body content.</p>
+            </div>
+
+            <div class="highlight">
+                <strong>Font Hierarchy & Implementation:</strong>
+                <ul>
+                    <li>Google Fonts Import: <code>@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500&display=swap');</code></li>
+                    <li>H1: 2rem, Roboto Slab 700, White on dark backgrounds</li>
+                    <li>H2, H3: Roboto Slab 700, Basketball Red (#CE1141)</li>
+                    <li>Body: 1rem, Roboto 400, Dark text (#333)</li>
+                    <li>Navigation: Roboto 500, Responsive hover states</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Wireframes</h2>
+            <p>Home page layout designs for different screen sizes:</p>
+            
+            <div class="wireframe-container">
+                <div class="wireframe mobile-wireframe">
+                    <h4>📱 Mobile View (320px-768px)</h4>
+                    <div class="wireframe-box">Header + Navigation (Hamburger Menu)</div>
+                    <div class="wireframe-box">Hero Section</div>
+                    <div class="wireframe-box">Drill of the Day</div>
+                    <div class="wireframe-box">CTA Card 1</div>
+                    <div class="wireframe-box">CTA Card 2</div>
+                    <div class="wireframe-box">Footer</div>
+                </div>
+                
+                <div class="wireframe desktop-wireframe">
+                    <h4>🖥️ Desktop View (768px+)</h4>
+                    <div class="wireframe-box">Header + Horizontal Navigation</div>
+                    <div class="wireframe-box">Large Hero Section with Background Image</div>
+                    <div class="wireframe-box">Drill of the Day (Prominent)</div>
+                    <div class="wireframe-box" style="height: 120px;">Two CTA Cards Side-by-Side</div>
+                    <div class="wireframe-box">Footer with Links</div>
+                </div>
+            </div>
+
+            <h3>Key Layout Features:</h3>
+            <ul>
+                <li><strong>Mobile-First Design:</strong> Stacked layout with easy thumb navigation</li>
+                <li><strong>Hero Section:</strong> Compelling headline with clear value proposition</li>
+                <li><strong>Daily Drill Feature:</strong> Prominent placement to encourage regular engagement</li>
+                <li><strong>Clear Call-to-Actions:</strong> Easy navigation to main site functions</li>
+                <li><strong>Consistent Navigation:</strong> Always accessible site menu</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Content Strategy</h2>
+            <h3>Site Pages:</h3>
+            <ol>
+                <li><strong>Home (index.html):</strong> Welcome, daily drill, navigation to main features</li>
+                <li><strong>Skills & Drills (skills.html):</strong> Categorized library of basketball drills</li>
+                <li><strong>Log Your Practice (log.html):</strong> Practice session tracking and progress monitoring</li>
+                <li><strong>References (references.html):</strong> Content sources and media credits</li>
+            </ol>
+
+            <h3>Key Content Elements:</h3>
+            <ul>
+                <li>Step-by-step drill instructions with difficulty levels</li>
+                <li>Progress tracking forms and visual feedback</li>
+                <li>Motivational messaging to encourage consistent practice</li>
+                <li>Clear navigation and intuitive user flow</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Technical Implementation</h2>
+            <h3>File Structure:</h3>
+            <ul>
+                <li><code>index.html</code> - Home page with hero section and drill of the day</li>
+                <li><code>skills.html</code> - Interactive drill library with filtering</li>
+                <li><code>log.html</code> - Practice logging system with local storage</li>
+                <li><code>references.html</code> - Content and media attribution</li>
+                <li><code>css/styles.css</code> - Comprehensive responsive stylesheet</li>
+                <li><code>js/scripts.js</code> - Interactive functionality and data management</li>
+            </ul>
+
+            <h3>Key Technical Features:</h3>
+            <ul>
+                <li><strong>Mobile-First Responsive Design:</strong> CSS Grid and Flexbox layouts</li>
+                <li><strong>CSS Custom Properties:</strong> Centralized theming with CSS variables</li>
+                <li><strong>JavaScript Data Management:</strong> Drill filtering and localStorage for practice logs</li>
+                <li><strong>Interactive Elements:</strong> Dynamic drill rotation, form handling, skill filtering</li>
+                <li><strong>Google Fonts Integration:</strong> Roboto Slab and Roboto font families</li>
+                <li><strong>Accessibility Features:</strong> Semantic HTML, proper form labels, keyboard navigation</li>
+                <li><strong>Performance Optimized:</strong> Efficient DOM manipulation and event handling</li>
+            </ul>
+
+            <h3>JavaScript Functionality:</h3>
+            <ul>
+                <li><strong>Drill of the Day:</strong> Random drill selection from predefined array</li>
+                <li><strong>Skill Filtering:</strong> Dynamic content filtering on Skills page</li>
+                <li><strong>Practice Logging:</strong> Form submission with localStorage persistence</li>
+                <li><strong>DOM Management:</strong> Template literals for dynamic HTML generation</li>
+                <li><strong>Date Handling:</strong> Automatic footer updates with current year and last modified date</li>
+            </ul>
+
+            <h3>Data Structure:</h3>
+            <p>The website uses a structured JavaScript array to store drill information:</p>
+            <ul>
+                <li><strong>Skills Categories:</strong> Shooting, Dribbling, Passing, Defense</li>
+                <li><strong>Drill Properties:</strong> skill, name, description</li>
+                <li><strong>Practice Logs:</strong> date, skill, duration, notes (stored in localStorage)</li>
+            </ul>
+        </section>
+
+        <footer style="text-align: center; padding: 2rem; color: #7f8c8d;">
+            <p>&copy; 2024 Baseline Fundamentals Site Plan. Created for Web Development Course.</p>
+            <p><em>This planning document will guide the development of the basketball fundamentals training website.</em></p>
+        </footer>
+    </div>
+</body>
+</html>
