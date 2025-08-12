@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+    color: #333;
+}
+
+header, footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: grid;
+    gap: 1rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[type="submit"] {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.7rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+    background: #2980b9;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.8rem;
+}
+
+legend {
+    font-weight: bold;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 0.3rem;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.rating input:checked ~ label {
+    color: gold;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: gold;
+}
+
+@media (min-width: 700px) {
+    form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    form label, 
+    form select, 
+    form textarea, 
+    form input[type="date"], 
+    form input[type="text"],
+    form fieldset {
+        grid-column: span 2;
+    }
+
+    input[type="submit"] {
+        grid-column: span 2;
+        justify-self: start;
+        width: fit-content;
+    }
+}

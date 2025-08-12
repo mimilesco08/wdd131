@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script defer src="scripts/scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+            <label for="productName">Product Name</label>
+            <select id="productName" name="productName" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
+
+            <fieldset class="rating">
+                <legend>Overall Rating</legend>
+                <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">★</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">★</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">★</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">★</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">★</label>
+            </fieldset>
+
+            <label for="installDate">Date of Installation</label>
+            <input type="date" id="installDate" name="installDate" required>
+
+            <fieldset>
+                <legend>Useful Features</legend>
+                <label><input type="checkbox" id="feature1" name="features" value="Durability"> Durability</label>
+                <label><input type="checkbox" id="feature2" name="features" value="Design"> Design</label>
+                <label><input type="checkbox" id="feature3" name="features" value="Performance"> Performance</label>
+                <label><input type="checkbox" id="feature4" name="features" value="Value"> Value</label>
+            </fieldset>
+
+            <label for="reviewText">Written Review</label>
+            <textarea id="reviewText" name="reviewText" rows="4" placeholder="Write your review here..."></textarea>
+
+            <label for="username">Your Name</label>
+            <input type="text" id="username" name="username" placeholder="Optional">
+
+            <input type="submit" value="Submit Review">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Product Review | WDD 131</p>
+    </footer>
+</body>
+</html>
