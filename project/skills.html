@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1>Baseline Fundamentals</h1>
+        <h1>🏀 Baseline Fundamentals</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="skills.html">Skills & Drills</a>
@@ -19,26 +19,82 @@
     </header>
 
     <main>
-        <h2>Drill Library</h2>
-        <p>Find the perfect drill to work on any part of your game. Use the filter to narrow your search.</p>
-        
-        <div class="filter-controls">
-            <label for="skill-filter">Filter by Skill:</label>
-            <select id="skill-filter">
-                <option value="all">Show All</option>
-                <option value="Shooting">Shooting</option>
-                <option value="Dribbling">Dribbling</option>
-                <option value="Passing">Passing</option>
-                <option value="Defense">Defense</option>
-            </select>
-        </div>
-
-        <div id="drills-container">
+        <section id="page-header">
+            <div class="page-header-content">
+                <h2>🏃‍♂️ Drill Library</h2>
+                <p>Find the perfect drill to work on any part of your game. Use the filter to narrow your search and focus on specific skills.</p>
+                <img src="https://images.unsplash.com/photo-1520045892088-7ca4f1ffc725?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Basketball training equipment and court" class="header-image">
             </div>
+        </section>
+
+        <section id="drill-categories">
+            <div class="categories-grid">
+                <div class="category-card shooting">
+                    <img src="https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Basketball shooting" class="category-image">
+                    <h3>🎯 Shooting</h3>
+                    <p>Perfect your shot mechanics and accuracy</p>
+                </div>
+                <div class="category-card dribbling">
+                    <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Basketball dribbling" class="category-image">
+                    <h3>⚡ Dribbling</h3>
+                    <p>Enhance your ball handling and control</p>
+                </div>
+                <div class="category-card passing">
+                    <img src="https://images.unsplash.com/photo-1506629905645-b178aa0c8c4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Basketball passing" class="category-image">
+                    <h3>🤝 Passing</h3>
+                    <p>Master precision and teamwork skills</p>
+                </div>
+                <div class="category-card defense">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Basketball defense" class="category-image">
+                    <h3>🛡️ Defense</h3>
+                    <p>Build lockdown defensive fundamentals</p>
+                </div>
+            </div>
+        </section>
+                
+        <section id="drill-filter-section">
+            <div class="filter-controls">
+                <label for="skill-filter">Filter by Skill:</label>
+                <select id="skill-filter">
+                    <option value="all">Show All Drills</option>
+                    <option value="Shooting">🎯 Shooting</option>
+                    <option value="Dribbling">⚡ Dribbling</option>
+                    <option value="Passing">🤝 Passing</option>
+                    <option value="Defense">🛡️ Defense</option>
+                </select>
+            </div>
+
+            <div id="drills-container">
+                <!-- Drills will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <section id="pro-tips">
+            <div class="pro-tips-content">
+                <h2>💡 Pro Training Tips</h2>
+                <div class="tips-grid">
+                    <div class="tip-item">
+                        <img src="https://images.unsplash.com/photo-1594736797933-d0d29a58b6e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Basketball practice consistency" class="tip-image">
+                        <h3>Consistency is Key</h3>
+                        <p>Practice a little every day rather than long sessions once a week. Muscle memory develops through repetition.</p>
+                    </div>
+                    <div class="tip-item">
+                        <img src="https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Basketball focus and concentration" class="tip-image">
+                        <h3>Quality over Quantity</h3>
+                        <p>Focus on perfect form rather than speed. Build the right habits from the beginning.</p>
+                    </div>
+                    <div class="tip-item">
+                        <img src="https://images.unsplash.com/photo-1577223625816-7546f13df25d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Basketball game simulation" class="tip-image">
+                        <h3>Practice Game Situations</h3>
+                        <p>Always practice drills at game speed and in game-like situations for maximum transfer to real play.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> Baseline Fundamentals. All rights reserved.</p>
         <p>Last Modified: <span id="last-modified"></span></p>
         <p><a href="references.html">Content & Media References</a></p>
     </footer>

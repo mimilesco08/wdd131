@@ -11,9 +11,19 @@
     --bg-color: #f8f9fa;
     --card-bg-color: #ffffff;
     --border-color: #dee2e6;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
     
     --heading-font: 'Roboto Slab', serif;
     --body-font: 'Roboto', sans-serif;
+    
+    --shadow-light: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-medium: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-heavy: 0 8px 25px rgba(0,0,0,0.15);
+    
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
 }
 
 /* Base and Typography Styles (Mobile First) */
@@ -28,13 +38,32 @@ body {
     line-height: 1.6;
     background-color: var(--bg-color);
     color: var(--text-color);
+    font-size: 16px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     font-weight: 700;
     margin-bottom: 0.75rem;
     color: var(--secondary-color);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
 }
 
 p {
@@ -44,27 +73,40 @@ p {
 a {
     color: var(--primary-color);
     text-decoration: none;
+    transition: var(--transition);
 }
 
 a:hover {
+    color: var(--secondary-color);
     text-decoration: underline;
 }
 
-/* Header and Footer */
-header, footer {
-    background-color: var(--secondary-color);
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header and Navigation */
+header {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
     color: var(--light-text-color);
-    text-align: center;
     padding: 1.5rem 1rem;
+    box-shadow: var(--shadow-medium);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 header h1 {
     color: var(--light-text-color);
     font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 nav {
-    margin-top: 1rem;
+    text-align: center;
 }
 
 nav a {
@@ -72,18 +114,596 @@ nav a {
     margin: 0 0.5rem;
     font-weight: 500;
     font-size: 1rem;
-    padding: 0.5rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    display: inline-block;
 }
 
-nav a:hover {
-    background-color: var(--primary-color);
+nav a:hover,
+nav a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
     text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/* Main Content Layout */
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+}
+
+section:hover {
+    box-shadow: var(--shadow-medium);
+}
+
+/* Page Headers */
+#page-header {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), var(--bg-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+}
+
+#page-header h2 {
+    color: var(--light-text-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#page-header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #a80d34 100%);
+    color: var(--light-text-color);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--body-font);
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: var(--shadow-light);
+}
+
+.button:hover,
+.button:focus {
+    background: linear-gradient(135deg, #a80d34 0%, var(--primary-color) 100%);
+    text-decoration: none;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+    color: var(--light-text-color);
+}
+
+.button.secondary {
+    background: linear-gradient(135deg, var(--accent-color) 0%, #e6a520 100%);
+}
+
+.button.secondary:hover {
+    background: linear-gradient(135deg, #e6a520 0%, var(--accent-color) 100%);
+}
+
+/* Home Page Styles */
+#hero {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 4rem 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
+
+#hero h2 {
+    color: var(--light-text-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-top: 2rem;
+}
+
+/* Features Grid */
+#features {
+    padding: 3rem 2rem;
+}
+
+.features-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    background: var(--card-bg-color);
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.feature-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+/* CTA Cards */
+#cta-cards {
+    display: grid;
+    gap: 2rem;
+    background: none;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+}
+
+.card {
+    background: linear-gradient(135deg, var(--card-bg-color) 0%, #f8f9fa 100%);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow-light);
+}
+
+.card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Motivation Section */
+#motivation {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: var(--light-text-color);
+    padding: 3rem 2rem;
+}
+
+.motivation-content {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+}
+
+.motivation-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.motivation-text h2 {
+    color: var(--light-text-color);
+    margin-bottom: 1rem;
+}
+
+.motivation-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+blockquote {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    font-style: italic;
+    margin: 1.5rem 0;
+}
+
+/* Skills Page Styles */
+.categories-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 3rem;
+}
+
+.category-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    background: var(--card-bg-color);
+    border: 2px solid var(--border-color);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.category-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.category-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.category-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Filter Controls */
+.filter-controls {
+    background: var(--card-bg-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-light);
+    text-align: center;
+}
+
+.filter-controls label {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    margin-right: 1rem;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+.filter-controls select {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: var(--body-font);
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-controls select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(206, 17, 65, 0.1);
+}
+
+/* Drills Container */
+#drills-container {
+    display: grid;
+    gap: 2rem;
+}
+
+.drill-card {
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    background: var(--card-bg-color);
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+}
+
+.drill-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-2px);
+}
+
+.drill-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.drill-card p:first-of-type {
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Pro Tips Section */
+#pro-tips {
+    background: linear-gradient(135deg, #f8f9fa 0%, white 100%);
+    padding: 3rem 2rem;
+}
+
+#pro-tips h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.tips-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+.tip-item {
+    text-align: center;
+    padding: 2rem;
+    background: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+}
+
+.tip-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.tip-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form fieldset {
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    background: var(--card-bg-color);
+}
+
+form legend {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    padding: 0 1rem;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+form label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: var(--secondary-color);
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: var(--body-font);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(206, 17, 65, 0.1);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form button {
+    align-self: center;
+    margin-top: 1rem;
+}
+
+/* Practice Log Styles */
+.motivation-card {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--light-text-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin: 2rem 0;
+}
+
+.motivation-card h3 {
+    color: var(--light-text-color);
+    margin-bottom: 1rem;
+}
+
+.motivation-card p {
+    margin-bottom: 0.5rem;
+}
+
+.motivation-card em {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.motivation-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+/* Statistics */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--light-text-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--heading-font);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Log Entry Styles */
+.log-entry {
+    border-bottom: 2px solid var(--border-color);
+    padding: 1.5rem 0;
+    background: var(--card-bg-color);
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+
+.log-entry:last-child {
+    border-bottom: none;
+}
+
+.log-entry p {
+    margin-bottom: 0.5rem;
+}
+
+.log-entry strong {
+    color: var(--secondary-color);
+}
+
+/* References Page */
+.reference-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.reference-section:last-child {
+    border-bottom: none;
+}
+
+.reference-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.reference-section h4 {
+    color: var(--secondary-color);
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+.reference-section ul {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.reference-section li {
+    margin: 0.75rem 0;
+    line-height: 1.5;
+}
+
+.image-references ul {
+    margin-left: 1.5rem;
+}
+
+.navigation-card {
+    text-align: center;
+    background: linear-gradient(135deg, var(--bg-color) 0%, white 100%);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
 }
 
 footer p {
-    margin: 0.25rem 0;
+    margin: 0.5rem 0;
     font-size: 0.9rem;
 }
 
@@ -91,127 +711,11 @@ footer a {
     color: var(--accent-color);
 }
 
-/* Main Content Layout */
-main {
-    padding: 1rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-section {
-    background-color: var(--card-bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-/* Reusable Components */
-.button {
-    display: inline-block;
-    background-color: var(--primary-color);
+footer a:hover {
     color: var(--light-text-color);
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    font-weight: 700;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.button:hover {
-    background-color: #a80d34; /* Darker red */
-    text-decoration: none;
-    transform: translateY(-2px);
-}
-
-/* Home Page Specifics */
-#cta-cards {
-    display: grid;
-    gap: 1.5rem;
-    background: none;
-    border: none;
-    padding: 0;
-}
-
-.card {
-    background-color: var(--card-bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1.5rem;
-    text-align: center;
-}
-
-/* Skills Page Specifics */
-.filter-controls {
-    margin-bottom: 1.5rem;
-}
-
-.filter-controls label {
-    font-weight: 700;
-    margin-right: 0.5rem;
-}
-
-#drills-container {
-    display: grid;
-    gap: 1.5rem;
-}
-
-.drill-card {
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1.5rem;
-}
-
-/* Log Page Specifics */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-form fieldset {
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1rem;
-}
-
-form legend {
-    font-family: var(--heading-font);
-    font-weight: 700;
-    padding: 0 0.5rem;
-}
-
-form label {
-    font-weight: 500;
-    margin-bottom: 0.25rem;
-    display: block;
-}
-
-form input, form select, form textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    font-family: var(--body-font);
-    font-size: 1rem;
-}
-
-form button {
-    align-self: flex-start;
-}
-
-.log-entry {
-    border-bottom: 1px solid var(--border-color);
-    padding: 1rem 0;
-}
-
-.log-entry:last-child {
-    border-bottom: none;
-}
-
-/* Responsive Design (Tablet and up) */
+/* Responsive Design - Tablet */
 @media (min-width: 768px) {
     header {
         display: flex;
@@ -222,21 +726,115 @@ form button {
 
     header h1 {
         margin: 0;
+        text-align: left;
     }
 
     nav {
         margin: 0;
+        text-align: right;
     }
     
     main {
         padding: 2rem;
     }
 
-    #cta-cards, #drills-container {
+    .features-grid,
+    .categories-grid,
+    .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #cta-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .motivation-content,
+    .motivation-card {
         grid-template-columns: 1fr 1fr;
     }
 
-    #log-form-section, #log-history-section {
-      padding: 2rem;
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
+
+    .nav-buttons .button {
+        margin: 0 0.5rem;
+    }
+}
+
+/* Responsive Design - Desktop */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .features-grid,
+    .categories-grid,
+    .tips-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #drills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-image,
+    .header-image {
+        height: 500px;
+    }
+
+    section {
+        padding: 3rem;
+    }
+
+    #hero {
+        padding: 5rem 3rem;
+    }
+
+    #hero h2 {
+        font-size: 3rem;
+    }
+
+    #hero p {
+        font-size: 1.4rem;
+    }
+}
+
+/* Accessibility and Focus States */
+*:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading states */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }

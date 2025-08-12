@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log Your Practice - Baseline Fundamentals</title>
-    <meta name="description" content="Log your basketball practice sessions to track your progress over time.">
+    <meta name="description" content="Track your basketball practice sessions and monitor your improvement over time.">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/scripts.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Baseline Fundamentals</h1>
+        <h1>🏀 Baseline Fundamentals</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="skills.html">Skills & Drills</a>
@@ -19,43 +19,137 @@
     </header>
 
     <main>
+        <section id="page-header">
+            <div class="page-header-content">
+                <h2>📊 Track Your Progress</h2>
+                <p>Consistent practice tracking is the key to improvement. Log your sessions to stay motivated and see your growth over time.</p>
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Basketball court baseline view" class="header-image">
+            </div>
+        </section>
+
         <section id="log-form-section">
-            <h2>Log Your Practice Session</h2>
+            <h2>🎯 Log New Practice Session</h2>
             <form id="practice-log-form">
                 <fieldset>
-                    <legend>Session Details</legend>
-                    <label for="practice-date">Date:</label>
-                    <input type="date" id="practice-date" name="date" required>
+                    <legend>Practice Details</legend>
+                    
+                    <div class="form-group">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
 
-                    <label for="skill-practiced">Skill Focus:</label>
-                    <select id="skill-practiced" name="skill" required>
-                        <option value="" disabled selected>--Please choose an option--</option>
-                        <option value="Shooting">Shooting</option>
-                        <option value="Dribbling">Dribbling</option>
-                        <option value="Passing">Passing</option>
-                        <option value="Defense">Defense</option>
-                    </select>
+                    <div class="form-group">
+                        <label for="skill">Primary Skill Focus:</label>
+                        <select id="skill" name="skill" required>
+                            <option value="">Select a skill</option>
+                            <option value="Shooting">🎯 Shooting</option>
+                            <option value="Dribbling">⚡ Dribbling</option>
+                            <option value="Passing">🤝 Passing</option>
+                            <option value="Defense">🛡️ Defense</option>
+                            <option value="Mixed">🔄 Mixed Fundamentals</option>
+                        </select>
+                    </div>
 
-                    <label for="practice-duration">Duration (minutes):</label>
-                    <input type="number" id="practice-duration" name="duration" min="1" placeholder="e.g., 30" required>
+                    <div class="form-group">
+                        <label for="duration">Duration (minutes):</label>
+                        <input type="number" id="duration" name="duration" min="5" max="300" required>
+                    </div>
 
-                    <label for="practice-notes">Notes / What to improve:</label>
-                    <textarea id="practice-notes" name="notes" rows="4" placeholder="e.g., Worked on keeping my guide hand steady."></textarea>
+                    <div class="form-group">
+                        <label for="intensity">Intensity Level:</label>
+                        <select id="intensity" name="intensity" required>
+                            <option value="">Select intensity</option>
+                            <option value="Light">🟢 Light - Easy pace, form focus</option>
+                            <option value="Moderate">🟡 Moderate - Steady workout</option>
+                            <option value="Intense">🔴 Intense - High-intensity training</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Practice Location:</label>
+                        <select id="location" name="location" required>
+                            <option value="">Where did you practice?</option>
+                            <option value="Home">🏠 Home/Driveway</option>
+                            <option value="Local Court">🏀 Local Court/Park</option>
+                            <option value="Gym">🏢 Gym/Recreation Center</option>
+                            <option value="School">🏫 School Gym</option>
+                            <option value="Other">📍 Other Location</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="goals">Session Goals (optional):</label>
+                        <textarea id="goals" name="goals" rows="3" placeholder="What did you want to work on today?"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Notes & Reflection:</label>
+                        <textarea id="notes" name="notes" rows="4" placeholder="How did the session go? What did you learn? Areas for improvement?"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rating">Session Rating:</label>
+                        <select id="rating" name="rating" required>
+                            <option value="">Rate your session</option>
+                            <option value="5">⭐⭐⭐⭐⭐ Excellent - Felt great, achieved goals</option>
+                            <option value="4">⭐⭐⭐⭐☆ Good - Solid practice session</option>
+                            <option value="3">⭐⭐⭐☆☆ Average - Did the work</option>
+                            <option value="2">⭐⭐☆☆☆ Below Average - Struggled today</option>
+                            <option value="1">⭐☆☆☆☆ Poor - Tough day, keep grinding</option>
+                        </select>
+                    </div>
                 </fieldset>
-                <button type="submit">Log Session</button>
+
+                <button type="submit" class="button">📝 Log Practice Session</button>
             </form>
         </section>
 
+        <section id="motivation-section">
+            <div class="motivation-card">
+                <img src="https://images.unsplash.com/photo-1546525848-3ce03ca516f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Basketball motivation" class="motivation-image">
+                <div class="motivation-content">
+                    <h3>🔥 Stay Consistent</h3>
+                    <p>Every session counts! Champions are made in the off-season through dedication and consistent practice. Track your journey and celebrate every improvement.</p>
+                    <p><em>"Success isn't given. It's earned in the gym, on the court, through blood, sweat, and the occasional tear."</em></p>
+                </div>
+            </div>
+        </section>
+
         <section id="log-history-section">
-            <h2>My Practice History</h2>
+            <h2>📈 Your Practice History</h2>
+            <div id="practice-stats">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-sessions">0</span>
+                        <span class="stat-label">Total Sessions</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-minutes">0</span>
+                        <span class="stat-label">Minutes Practiced</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="average-rating">0.0</span>
+                        <span class="stat-label">Average Rating</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="current-streak">0</span>
+                        <span class="stat-label">Day Streak</span>
+                    </div>
+                </div>
+            </div>
+            
             <div id="log-history-container">
-                <p>Your logged sessions will appear here.</p>
+                <p>No practice sessions logged yet. Fill out the form above to get started!</p>
+            </div>
+
+            <div id="clear-logs-section">
+                <button id="clear-logs-btn" class="button secondary">🗑️ Clear All Logs</button>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> Baseline Fundamentals. All rights reserved.</p>
         <p>Last Modified: <span id="last-modified"></span></p>
         <p><a href="references.html">Content & Media References</a></p>
     </footer>
